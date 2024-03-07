@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: 0, 0%, 100%;
+    --logo-color: 49, 88%, 54%;
+    --border-white-color: 242.2, 49.4%, 67.45%;
+    --text-gray-color: 218, 6%, 27%;
+  }
+
+  main {
+    min-height: 100dvh;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+  }
+
+  .animate-bounce1 {
+    animation: bounce 1s infinite;
+  }
+
+  .animate-bounce2 {
+    animation: bounce 1s infinite 0.1s;
+  }
+
+  .animate-bounce3 {
+    animation: bounce 1s infinite 0.2s;
+  }
+}
+
+@layer components {
+  .link-styles {
+    @apply self-start cursor-pointer text-lg underline underline-offset-4 hover:no-underline;
+  }
+
+  .separator-styles {
+    @apply flex flex-row bg-black w-[98%] h-full border-t border-white my-4;
+  }
+}
